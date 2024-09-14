@@ -1,0 +1,1002 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #ddeaf4;
+}
+/* Header................................................................................................. */
+.header-container {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 60px;
+  background-color: rgba(119, 182, 212, 0.8);
+}
+.header-parent {
+  position: relative;
+  overflow: auto;
+}
+.logo {
+  float: left;
+  margin-left: 50px;
+  border-radius: 30px;
+}
+.nav_bar {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav_bar li {
+  float: left; 
+  display: block;
+  color: #fff;
+  margin-right: 25px;
+  margin-top: 18px;
+}
+.nav_bar li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 18px;
+  font-family: cursive;
+}
+.nav_bar li a:hover {
+  color: #989d9f;
+}
+/* Home Page ...............................................................................................*/
+.home-div1 {
+  position: relative; 
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../Images/background3.jpg');
+  background-size: cover;
+}
+
+.home-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 8, 9, 0.4);
+}
+
+.home-parent {
+  position: absolute;
+  background-color: none;
+  width: 60%;
+  height: 60%;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-title1 {
+color: #eef1f3;
+font-family: 'Great Vibes', cursive;
+font-weight: 800;
+font-size: 70px;
+padding-top: 100px;
+}   
+
+.home-p1 {
+font-family: 'Great Vibes', cursive;
+letter-spacing: 2px; 
+text-align: center;
+font-size: 20px;
+font-weight: 300;
+color: #ddeaf4;
+}
+
+.home-btn1, .home-btn2 {
+margin-top: 20px;
+border-radius: 5px;
+border: 0;
+padding: 15px 50px;
+cursor: pointer;
+font-size: 18px;
+transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+.home-btn1 {
+margin-left: 200px;
+margin-right: 50px;
+}
+
+.home-btn2 {
+margin-right: 80px;
+background-color: #204d9f;
+color: #ddeaf4;
+}
+
+/* Hover effects */
+.home-btn1:hover {
+background-color: #1e3a8a; 
+color: #ffffff; 
+}
+
+.home-btn2:hover {
+background-color: #173f5f; 
+color: #ffffff; 
+}
+
+/*About Section.......................................................................................*/
+.welcome_container {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #ddeaf4;
+  padding: 30px;
+}
+
+.welcome-main {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #0b0b0e;
+}
+
+.welcome-line {
+  width: 80px;
+  height: 4px;
+  background-color: #2432b0;
+  margin: 10px auto;
+}
+
+.welcome-parent {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.welcome-item {
+  display: inline-block;
+  width: 30%;
+  margin: 1.5%;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #2b4c99;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  z-index: 2; /* Ensure the item itself is above the pseudo-element */
+}
+
+.welcome-item h2,
+.welcome-item p,
+.welcome-item i { /* Ensure icons are included */
+  margin-bottom: 15px;
+  position: relative; /* Ensure text and icons are above pseudo-elements */
+  z-index: 3; /* Higher than the pseudo-elements */
+}
+
+.welcome-item a {
+  background-color: #3d7eb6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  position: relative; /* Ensure link is above pseudo-element */
+  z-index: 3; /* Higher than the pseudo-element */
+}
+
+.welcome-item a:hover {
+  background-color: #6c88ce;
+}
+
+.welcome-item::before,
+.welcome-item::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transition: all 2s ease;
+}
+
+.welcome-item::after {
+  background-color: rgba(15, 135, 199, 0.8); /* Background color for ::after pseudo-element */
+  z-index: 0; /* Lowest in stacking order */
+}
+
+.welcome-item:hover::before {
+  width: 100%;
+  height: 50%; /* Adjust height as needed for effect */
+}
+
+.welcome-item:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.ww {
+  background-color: #445e6f;
+  color: white;
+  border: 2px solid #7bb6e3;
+}
+
+.ww h2,
+.ww p,
+.ww a {
+  color: white;
+}
+
+.ww:hover {
+  background-color: #55b4dd;
+  border-color: #2432b0;
+  z-index: 10;
+}
+
+
+/*Portfolio Section.....................................................................................*/
+.portfolio-container {
+  width:80%;
+  height:75vh;
+  margin: auto;
+  top:0;
+  left:0;
+  background-color: #ddeaf4;
+  height: 900px;
+}
+.portfolio-main {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  margin-top: 30px;
+  font-size: 50px;
+}
+.portfolio-line {
+  width:80px;
+  height:4px;
+  background-color: rgb(36, 110, 200);
+  margin: auto;
+  margin-top: 7px;
+}
+.portfolio-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.p-item {
+  width: 30%;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+.portfolio-image {
+  width: 100%;
+  display: block;
+}
+.p-item{
+position:relative;
+}
+.p-item:hover .portfolio-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.portfolio-title {
+  font-size: 20px;
+  font-weight: 500px;
+  text-transform:capitalize;
+  color: #6195ff;
+  margin-bottom: 5px;
+  display: block;
+}
+.title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.portfolio-overlay{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background-color: rgba(0,0,0,0.5);
+text-align: center;
+padding:50px;
+visibility: hidden;
+}
+.portfolio-title {
+padding: 60px;
+color: #6195ff;;
+font-size: larger;
+}
+.title {
+text-align:center;
+color: #fff;
+}
+.p-item:hover .portfolio-overlay{
+  opacity: 1;
+  visibility: visible;
+}
+.overlay-details a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(120, 159, 226); 
+  color: white; 
+  text-align: center;
+  line-height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
+}
+.overlay-details a i {
+  font-size: 18px;
+  color: white; 
+}
+.overlay-details a:hover {
+  background-color: #4a7dff; 
+  color: white; }
+
+.overlay-details a:hover i {
+  color: white; }
+
+/*offer Section.....................................................................................*/
+.offer-container {
+  width: 80%;
+  height: 75vh;
+  margin: auto;
+  background-color: #ddeaf4;
+  height: 700px;
+}
+.offer-main {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 50px;
+  padding: 20px;
+}
+.offer-line {
+  width: 80px;
+  height: 4px;
+  background-color: rgb(36, 110, 200);
+  margin: auto;
+  margin-top: 4px;
+}
+.offer-item {
+  width: 30%;
+  display: inline-block;
+  margin: 1.5%;
+  padding: 10px;
+  border: 2px solid rgb(36, 95, 163);
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+}
+.offer-title, .offer-p , .i1{
+  text-align: center;
+  padding: 18px 14px;
+  transition:  0.5s;
+  position: relative;
+  z-index: 2; 
+}
+.offer-title , .i1 {
+  display: inline;
+  text-align: center;
+}
+.offer-item:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgb(22, 59, 101);
+  opacity: 0;
+  z-index: 1; 
+  transition: 2s;
+}
+.offer-item:hover:after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.offer-item:hover .offer-title, 
+.offer-item:hover .offer-p ,
+.offer-item:hover .i1 {
+  color: #fff; 
+}
+/*Service Section...................................................................................*/ 
+
+.section-title{
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #0b0b0e;
+}
+.section-line{
+    width: 80px;
+    height: 4px;
+    background-color: #2432b0;
+    margin: 10px auto;
+}
+.service-content, .service-image-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-line {
+  display: block;
+  margin: 0 auto 45px auto;
+  width: 50px;
+  height: 4px;
+  background-color: #6195ff;
+}
+
+.service-description {
+  padding: 0 20px;
+  color: #666;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.service-list li i {
+  border: 1px solid #6195ff;
+  color: #6195ff;
+  padding: 3px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.service-list li {
+  margin-bottom: 13px;
+  color: #666;
+  font-size: 16px;
+}
+
+.service-image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.image-bullets {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.image-bullets li {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #a8a8a8;
+  margin: 10px 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.image-bullets li:first-child, .image-bullets li:hover, .bullet-active {
+  background-color: #6195ff;
+}
+
+@media (min-width: 769px) {
+  .service-content, .service-image-section {
+    width: 50%;
+    float: left;
+  }
+  .service-image {
+    margin-left: auto;
+  }
+}
+.clear {
+  clear: both;
+}
+
+
+/*Degree Section...................................................................................*/  
+.degree-container {
+  position: relative;
+  background-image: url("../Images/degree.avif");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 350px;
+}
+.degree-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(6, 8, 9, 0.4);;
+}
+.degree-parent {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+.degree-person {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.person {
+  width: 45%;
+  color: #fff;
+  padding-right: 20px;
+}
+.degree-header {
+  padding: 90px 20px 10px 150px;
+  position: relative;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.degree-h {
+    font-size: 25px;
+}
+
+.degree-image {
+  position: absolute;
+  top: 82px;
+  left: 65px;
+  border-radius: 50%;
+}
+
+.degree-p {
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-left: 76px;
+  font-size: 18px;
+}
+
+.degree-span {
+  color: #6195ff;
+}
+
+/*Team Section...................................................................................*/
+  .team-container{
+    width:80%;
+    height:75vh;
+    margin: auto;
+    top:0;
+    left:0;
+    background-color: #ddeaf4;
+  }
+ .team-main {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 50px;
+    padding: 20px;
+}
+.team-line {
+    width:80px;
+    height:4px;
+    background-color: rgb(36, 110, 200);
+    margin: auto;
+    margin-top: -10px;
+}
+  .team-parent {
+    overflow:auto
+  }
+  .team-item {
+    float:left;
+    width:30%;
+    background-color: rgb(73, 92, 114);
+    text-align: center;
+    padding: 18px 14px;
+    position:relative;
+  }
+  .tt {
+    margin: 0px 5%;
+  }
+  .team-info {
+    color: #fcfdfd;
+  }
+  .team-image {
+    position: relative;
+  }
+  .team-overlay {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+  }
+  .team-item:hover .team-overlay {
+    visibility: visible;
+  }
+  .team-item:hover .team-name {
+    color: #cabcb2;
+    font-size: 26px;
+  }
+  .team-item:hover .team-p1 {
+    color: #6eb5dd;
+    font-size: 23px;
+  }
+  .team-overlay a {
+    display: block;
+    width:40px;
+    height :40px;
+    background-color: rgb(168, 204, 237);
+    color:#fff;
+    margin-left :auto
+  }
+  .team-item::after{
+    position :absolute;
+    content: "";
+    width:0;
+    height:0;
+    top:0;
+    left:0;
+    background-color: rgb(53, 120, 138);
+    opacity:1;
+  }
+  .team-item:hover::after {
+    width:100%;
+    height:100%;
+    opacity:0.2;
+    transition: 2s;
+  }
+  .team-item::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(86, 171, 216);
+    opacity: 1;
+  }
+  .team-item:hover::before {
+    width:100%;
+    height:100%;
+    opacity:0.2;
+    transition: 2s;
+  }
+/*Numbers Section......................................................................................*/
+.numbers-container {
+  position: relative;
+  background-image: url("https://assets.onecompiler.app/42qxhvq6x/42s5v85zh/numbers.jpg");
+  height:300px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.numbers-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(6, 8, 9, 0.4);;
+}
+.numbers-items{
+  overflow:hidden;
+  padding-top: 120px;
+}
+.number-item {
+  width: 25%;
+  float: left;
+  text-align:center;
+}
+.number-item .i7{
+  color:#6195ff;
+  margin-bottom: 15px;
+}
+.numbers-title{
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+}
+.numbers-text {
+  color: #fff;
+}
+/*Pricing Section......................................................................................*/
+.pricing-container {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #ddeaf4;
+  padding: 30px;
+}
+.pricing-money {
+  border: 2px solid #2432b0;
+  width:100px;
+  height:100px;
+  border-radius: 50% ;
+  margin: auto;
+}
+.pricing-main {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #0b0b0e;
+}
+
+.pricing-line {
+  width: 80px;
+  height: 4px;
+  background-color: #2432b0;
+  margin: 10px auto;
+}
+
+.pricing-parent {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pricing-item {
+  display: inline-block;
+  width: 30%;
+  margin: 1.5%;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #2b4c99;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  z-index: 2; 
+}
+
+.pricing-item h3 {
+  margin-bottom: 15px;
+  position: relative; 
+  z-index: 3; 
+}
+
+.pricing-money p {
+  font-size: 24px;
+  margin: 10px 0;
+  position: relative; 
+  z-index: 3; 
+}
+
+.pricing-item p {
+  margin-bottom: 10px;
+  position: relative; 
+  z-index: 3; 
+}
+.pricing-btn {
+  background-color: #3d7eb6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 3; 
+}
+
+.pricing-btn:hover {
+  background-color: #6c88ce;
+}
+
+.pricing-item::before,
+.pricing-item::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transition: all 2s ease;
+}
+
+.pricing-item::after {
+  background-color: rgba(46, 139, 189, 0.8); 
+  z-index: 0; 
+}
+.pricing-item:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.pp {
+  border: 2px solid #55b4dd; 
+  background-color: #445e6f; 
+}
+
+.pp h3,
+.pp p,
+.pp .pricing-btn {
+  color: white;
+}
+
+.pp:hover {
+  border-color: #2432b0;
+  z-index: 10;
+}
+
+/*Blog section....................................................................................*/
+.blog-container {
+  background-color: #ddeaf4;
+  padding: 40px 0;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.blog-main {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #0b0b0e;
+}
+
+.blog-line {
+  width: 60px;
+  height: 4px;
+  background-color: #6195ff;
+  margin: 0 auto 20px;
+}
+
+.blog-parent {
+  overflow: hidden;
+}
+
+.blog-item {
+  width: 30%;
+  background-color: #fff;
+  position: relative;
+  float: left; 
+  margin: 0 1.5%; 
+  margin-bottom: 20px;
+  transition: transform 0.3s; 
+}
+
+.blog-item:nth-child(3n) {
+  margin-right: 0; 
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+}
+
+.blog-info {
+  padding: 20px;
+}
+
+.blog-fonts {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.blog-fonts i {
+  color: #6195ff;
+  margin-right: 5px;
+}
+
+.blog-name, .blog-data, .blog-num {
+  margin-right: 10px;
+}
+
+.blog-paragraphs {
+  text-align: left;
+}
+
+.blog-title1 {
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.blog-p {
+  color: #999;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.blog-span {
+  color: #6195ff;
+  text-decoration: none;
+}
+
+.blog-item:hover {
+  transform: translateY(-5px);
+}
+
+.blog-item:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #6195ff;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.blog-item:hover:after {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+
+
+  /*footer section....................................................................................*/
+  .footer-container {
+    background-color: #21485b;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .footer-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-image {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links li {
+    display: inline-block;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #2374c0;
+  }
+  
+  .footer-p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer-p:before {
+    content: "© "; 
+  }
+  
+
+  
